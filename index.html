@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>판다마켓</title>
 </head>
 <body>
     <header>
         <nav class="herader-nav">
-            <a class="header__logo-box": href ="/">
+            <a class="header__logo-box" href ="/">
                 <img class="header__logo" src="images/logo/logo.png">
             </a>
             <a class="header__button button" href="login.html">로그인</a> 
@@ -20,7 +21,7 @@
         <section class="banner-section">
             <div class="banner">
                 <div class="banner__title">
-                    <h1 class="banner__text">일상의 모든 물건을 <sapn class="text-wrap"> 거래해 보세요</sapn></h1>
+                    <p class="banner__text">일상의 모든 물건을 <sapn class="text-wrap"> 거래해 보세요</sapn></p>
                     <a class="banner__button button" href="items.html">구경하러 가기</a>
                 </div>
                 <img class="banner__img" src="images/main/img_home_top.png">
@@ -59,7 +60,7 @@
         <section class="banner-section bottom-banner">
             <div class="banner">
                 <div class="banner__title banner__title--center">
-                    <h1 class="banner__text">믿을 수 있는 <span class="text-wrap">판다마켓 중고 거래</span></h1>
+                    <p class="banner__text">믿을 수 있는 <span class="text-wrap">판다마켓 중고 거래</span></p>
                 </div>
                 <img class="banner__img" src="images/main/img_home_bottom.png">
             </div>
@@ -71,20 +72,28 @@
             <a class="footer__link" href="privacy.html">Privacy Policy</a>
             <a class="footer__link" href="faq.html">FAQ</a>
         </div>
-        <div class="footer-icons">
-            <a class="footer__icon" href="https://www.facebook.com" target="_blank">
-                <img src="images/icon/icon_facebook.png" alt="facebook">
-            </a>
-            <a class="footer__icon" href="https://x.com" target="_blank">
-                <img src="images/icon/icon_twitter.png" alt="twitter">
-            </a>
-            <a class="footer__icon" href="https://youtube.com" target="_blank">
-                <img src="images/icon/icon_youtube.png" alt="youtube">
-            </a>
-            <a class="footer__icon" href="https://instagram.com" target="_blank">
-                <img src="images/icon/icon_instagram.png" alt="instagram">
-            </a>
-        </div>
+        <ul class="footer-icons">
+            <li>
+                <a class="footer__icon" href="https://www.facebook.com" target="_blank">
+                    <img src="images/icon/icon_facebook.png" alt="facebook">
+                </a>
+            </li>
+            <li>
+                <a class="footer__icon" href="https://x.com" target="_blank">
+                    <img src="images/icon/icon_twitter.png" alt="twitter">
+                </a>
+            </li>
+            <li>
+                <a class="footer__icon" href="https://youtube.com" target="_blank">
+                    <img src="images/icon/icon_youtube.png" alt="youtube">
+                </a>
+            </li>
+            <li>
+                <a class="footer__icon" href="https://instagram.com" target="_blank">
+                    <img src="images/icon/icon_instagram.png" alt="instagram">
+                </a>
+            </li>
+        </ul>
     </footer>
 </body>
 </html>

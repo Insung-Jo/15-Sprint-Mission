@@ -1,21 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
-html {
-    font-family: 'Pretendard', sans-serif;
-}
-
-body {
-    margin: 0;
-}
-
-a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
 .text-wrap{
     display: block;
 }
@@ -209,7 +191,6 @@ header {
 
 /*Laptop Version*/
 @media (max-width: 1024px) {
-
    .herader-nav {
         margin-inline: 10%;
     }
@@ -227,12 +208,13 @@ header {
 
     .card {
         max-width: 760px;
-        height: 437px;
+        height: auto;
         gap: 48px;
     }
 
     .card__img {
         width: 60%;
+        height: auto;
     }
 
     .card__title {
@@ -248,7 +230,6 @@ header {
 
 /*Tablet Version*/
 @media (max-width: 768px) {
-
     .herader-nav {
         margin-inline: 10%;
     }
