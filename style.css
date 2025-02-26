@@ -11,11 +11,6 @@ body {
     margin: 0;
 }
 
-@font-face {
-    font-family: 'ROKAF Sans';
-    src: url("fonts/ROKAF_Slab_Serif_Bold.woff") format('woff');
-}
-
 a {
     cursor: pointer;
     text-decoration: none;
@@ -45,16 +40,8 @@ header {
     gap: 10px;
 }
 .header__logo{
-    width: 40px;
-    height: 40px;
-}
-
-.header__title {
-    font-size: 25px;
-    font-weight: 700;
-    color: #3692FF;
-    font-family: 'ROKAF Sans', sans-serif;
-    margin-bottom: 5px;
+    width: 153px;
+    height: 51px;
 }
 
 .header__button {
