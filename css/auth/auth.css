@@ -1,11 +1,20 @@
 /*form layout style*/
-.form {
+.auth-scetion {
    margin: 231px auto;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    width: 640px;
+   height: auto;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
    height: auto;
 }
 
@@ -103,7 +112,24 @@
    color: var(--gray800);
 }
 .form__footer-link {
-   font-size: 1.5rem;
+   font-size: 1.4rem;
    text-decoration: underline;
    color: var(--blue);
+}
+
+/*Moblie Version*/
+@media (min-width: 375px) and (max-width: 767px){
+   .auth-scetion {
+      width: 343px;
+   }
+
+   .form__logo{
+      width: 198px;
+      height: 66px;
+      margin-bottom: 24px;
+   }
+
+   .form__label {
+      font-size: 1.4rem;
+   }
 }
