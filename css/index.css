@@ -98,7 +98,7 @@ header {
 
 .banner__img {
     max-width: 746px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
