@@ -1,0 +1,215 @@
+/*index responsive-Tablet*/
+@media (min-width: 768px) and (max-width: 1199px){
+    /*header section*/
+    .herader-nav {
+        margin-inline: 2.4rem;
+    }
+
+    /*banner section*/
+    .banner {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 771px;
+        gap: 0;
+    }
+
+    .banner__button {
+        padding: 16px 124px;
+        font-size: 2rem;
+    }
+
+    .banner__title {
+        align-items: center;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .text-wrap{
+        display: inline;
+    }
+
+    .banner__img {
+        max-width: 744px;
+    }
+
+    /*card section*/
+    .card {
+        max-width: 696px;
+        height: 708px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .card__text {
+        text-align: left;
+        height: 160px;
+        gap: 24px;
+    }
+
+    .card__title {
+        font-size: 3.2rem;
+        line-height: 26px;
+    }
+    
+    .card__description {
+        font-size: 1.8rem;
+    }
+
+    .card__img {
+        max-width: 696px;
+        width: auto;
+        height: auto;
+    }
+
+    .card--reverse {
+        align-items: flex-end;
+    }
+
+    .card__text--reverse {
+        text-align: right;
+    }
+}
+
+/*index responsive-mobile*/
+@media (min-width: 375px) and (max-width: 767px){
+    /*header section*/
+    .header__logo{
+        width: 103px;
+        height: 35px;
+    }
+
+    .herader-nav {
+        margin-inline: 1.6rem;
+    }
+
+    .banner {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .banner__button {
+        width: 240px;
+        height: 48px;
+        padding: 12px 71px;
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+
+    .banner__title {
+        align-items: center;
+        text-align: center;
+        margin-top: 10%;
+        gap: 18px
+    }
+
+    .banner__text {
+        font-size: 3.2rem;
+        line-height: 4rem;  
+    }
+
+    .banner__img {
+        max-width: 448px;
+    }
+
+/*card section*/
+    .card-section {
+        padding-block: 5.2rem;
+    }
+
+    .card {
+        max-width: 344px;
+        height: 417px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .card__text {
+        text-align: left;
+        height: 160px;
+    }
+    .card__category {
+        font-size: 1.6rem;
+    }
+
+    .card__title {
+        font-size: 2.4rem;
+        line-height: 26px;
+    }
+    
+    .card__description {
+        font-size: 1.6rem;
+    }
+
+    .card__img {
+        max-width: 344px;
+        width: auto;
+        height: auto;
+    }
+
+    .card--reverse {
+        align-items: flex-end;
+    }
+
+    .card__text--reverse {
+        text-align: right;
+    }
+    .bottom-banner {
+        margin-top: 0;
+    }
+
+    .banner__title--center{
+        margin-top: 25%;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center; 
+        padding-top: 0;
+
+    }
+    .footer__name{
+        grid-column: 1 / 2;
+        grid-row: 2 / 2;
+    }
+
+    /*
+    title 관련 부분
+    기존 text-wrap에서 text-wrap--card가 추가되어
+    예상치 못한 동작 방지를 위해 아래에 배치.
+    */    
+    .text-wrap{
+        display: block;
+    }
+
+    .text-wrap--card {
+        display: inline;
+    }
+
+}
+
+/*auth responsive-moblie*/
+@media (min-width: 375px) and (max-width: 767px){
+    .auth-section {
+        max-width: 400px;
+       /* 좌우 여백을 뷰포트 기준으로 계산 */
+        width: calc(100vw - 1.6rem); 
+        margin: 30% auto;
+    }
+
+    .auth__logo{
+        width: 198px;
+        height: 66px;
+        margin-bottom: 24px;
+    }
+
+    .auth__label {
+        font-size: 1.4rem;
+    }
+}
