@@ -2,7 +2,7 @@ body {
     min-width: 375px;
 }
 
-.sr-only{
+.sr-only {
     position: absolute;
     width: 1px;	
     height: 1px;	
@@ -14,7 +14,19 @@ body {
     clip: rect(0 0 0 0);
 }
 
-.text-wrap{
+.text-wrap {
     display: block;
     font-size: 100%;
+}
+
+.button {
+    padding-block: 16px;
+    background-color: var(--blue);
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--dark-blue);
 }
