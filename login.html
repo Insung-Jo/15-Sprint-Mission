@@ -18,12 +18,18 @@
                 <img class="auth__logo" src="images/logo/logo.png" alt="판다마켓 메인으로 이동">
             </a>
             <form class="auth__form">
-                <label class="auth__label" for="email">이메일</label>
-                <input class="auth__input" id="email" type="email" name="email" placeholder="이메일을 입력해주세요.">
-                <label class="auth__label" for="password">비밀번호</label> 
-                <div class="auth__password-input">
-                    <input class="auth__input" id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요.">
-                    <button class="auth__password-toggle" type="button" aria-label="비밀번호 숨기기"></button>
+                <div class="auth-container">
+                    <label class="auth__label" for="email">이메일</label>
+                    <input class="auth__input" id="email" type="email" name="email" placeholder="이메일을 입력해주세요.">
+                    <div class="email-error error"></div>
+                </div>
+                <div class="auth-container">
+                    <label class="auth__label" for="password">비밀번호</label> 
+                    <div class="auth-container__password">
+                        <input class="auth__input" id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요.">
+                        <button class="auth__password-toggle" type="button" aria-label="비밀번호 숨기기"></button>
+                    </div>
+                    <div class="pasword-error error"></div>
                 </div>
                 <button class="login-button auth__submit-button button" type="submit">로그인</button>
             </form>
@@ -48,5 +54,6 @@
             </p>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
