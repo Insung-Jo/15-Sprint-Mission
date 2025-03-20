@@ -19,6 +19,11 @@ body {
     font-size: 100%;
 }
 
+.deactivate-button {
+    background-color: var(--gray400);
+    color: var(--white);
+}
+
 .button {
     padding-block: 16px;
     background-color: var(--blue);
@@ -26,6 +31,7 @@ body {
     color: var(--white);
     text-align: center;
 }
+
 
 .button:hover {
     background-color: var(--dark-blue);

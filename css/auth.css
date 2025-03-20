@@ -49,7 +49,7 @@
    font-weight: 400;
 }
 
-.auth__submit-button {
+.auth__button-layout {
    width: 100%;
    height: 56px;
    margin-bottom: 24px;
