@@ -3,11 +3,13 @@ import {
     passwordError, nickNameError, confirmError
 } from './authConstants.js'; 
 
+// 유효성 검사 여부 확인을 위한 변수
 let isEmail = false;
 let isPassword = false;
 let isNickName = false;
 let isConfirm = false;
 
+// 이메일 유효성 검사
 const checkEmail = () => {
     const patternEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
     if (email.value === '') {
@@ -25,6 +27,7 @@ const checkEmail = () => {
     }
 }
 
+// 비밀번호 유효성 검사
 const checkPassword = () => {
     const patternPassword = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/;
     if (password.value === '') {
@@ -42,6 +45,7 @@ const checkPassword = () => {
     }
 }
 
+// 닉네임 유효성 검사
 const checkNickname = () => {
     if (nickName.value === '') {
         nickNameError.textContent = '닉네임을 입력해주세요.';
@@ -54,6 +58,7 @@ const checkNickname = () => {
     }
 }
 
+// 비밀번호 확인 
 const checkPasswordConfirm = () => {
     if (passwordConfirm.value !== password.value) {
         confirmError.textContent = '비밀번호가 일치하지 않습니다.';
@@ -66,8 +71,7 @@ const checkPasswordConfirm = () => {
     }
 }
 
-
-
+// 버튼 활성화/비활성화
 const updateSubmitButtonState = () => {
     if (inputs.length === 2) {
         if (isEmail && isPassword) {
@@ -87,17 +91,18 @@ const updateSubmitButtonState = () => {
         }
     }
 }
+
+// 비밀번호 보이기/숨기기
 const visibilityToggle = (button) => {
     const input = button.previousElementSibling; 
     button.classList.toggle('auth__password-toggle--confirm');
     if (button.classList.contains('auth__password-toggle--confirm')) {
+        button.setAttribute('aria-label', '비밀번호 보이기');
         input.type = 'text';
     } else {
+        button.setAttribute('aria-label', '비밀번호 숨기기');
         input.type = 'password';
     }
 }
-
-
-
 
 export { checkEmail, checkNickname, checkPassword, checkPasswordConfirm, updateSubmitButtonState, visibilityToggle};

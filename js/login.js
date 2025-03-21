@@ -6,8 +6,8 @@ password.addEventListener('focusout', checkPassword);
 
 inputs.forEach((input) => {
     input.addEventListener('focusout', updateSubmitButtonState);
-})
+});
 
 visibilities.forEach((button) => {
     button.addEventListener('click', () => visibilityToggle(button));
-})
+});
