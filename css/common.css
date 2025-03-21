@@ -22,6 +22,7 @@ body {
 .deactivate-button {
     background-color: var(--gray400);
     color: var(--white);
+    cursor: default;
 }
 
 .button {
@@ -30,6 +31,7 @@ body {
     font-weight: 600;
     color: var(--white);
     text-align: center;
+    cursor: pointer;
 }
 
 

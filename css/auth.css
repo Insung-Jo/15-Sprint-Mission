@@ -33,7 +33,7 @@
    margin-bottom: 24px;
 }
 
-.auth-container__password {
+.auth-container__password, .auth-container__password-confirm {
    position: relative;
 }
 

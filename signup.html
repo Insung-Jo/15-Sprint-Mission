@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="/css/auth.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/js/authConstants.js" type="module"></script>
+    <script src="/js/authEventManager.js" type="module"></script>
+    <script src="/js/signUp.js" type="module"></script>
     <title>판다마켓 : 회원가입</title>
 </head>
 <body> 
@@ -17,7 +20,7 @@
             <a class="auth__logo-link" href="/">
                 <img class="auth__logo" src="images/logo/logo.png" alt="메인으로 이동">
             </a>
-            <form class="auth__form">
+            <form action="login.html" method="get" class="auth__form">
                 <div class="auth-container">
                     <label class="auth__label" for="email">이메일</label>
                     <input class="auth__input" id="email" type="email" name="email" placeholder="이메일을 입력해주세요.">
@@ -33,16 +36,16 @@
                     <div class="auth-container__password">
                         <input class="auth__input" id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요.">
                         <button class="auth__password-toggle"type="button" aria-label="비밀번호 숨기기"></button>
-                        <div class="pasword-error error"></div>
                     </div>
+                    <div class="pasword-error error"></div>
                 </div>
                 <div class="auth-container">
                 <label class="auth__label" for="password-confirm">비밀번호 확인</label> 
-                    <div class="auth-container__password">
-                        <input class="auth__input" id="password-confirm" type="text" name="password-confirm" placeholder="비밀번호를 입력해주세요.">
-                        <button class="auth__password-toggle auth__password-toggle--confirm"type="button" aria-label="비밀번호 보기"></button>
-                        <div class="confirm-error error"></div>
+                    <div class="auth-container__password-confirm">
+                        <input class="auth__input" id="password-confirm" type="password" name="password-confirm" placeholder="비밀번호를 입력해주세요.">
+                        <button class="auth__password-toggle"type="button" aria-label="비밀번호 숨기기"></button>
                     </div>
+                    <div class="confirm-error error"></div>
                 </div>
                 <button class="sign-up-button deactivate-button auth__button-layout" type="submit">회원가입</button>
             </form>
@@ -67,6 +70,5 @@
             </p>
         </div>
     </main>
-    <script src="auth.js"></script>
 </body>
 </html>
