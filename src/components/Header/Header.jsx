@@ -1,13 +1,18 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Profile from "../Profile/Profile";
 import Nav from "../Nav/Nav";
+import { HeaderStyle, containerStyle } from "./Header.styles";
+import Logo from "../Logo/Logo";
 
+/** @jsxImportSource @emotion/react */
 const Header = () => {
   return (
     <>
-      <header>
-        <Link to="/">판다마켓</Link>
-        <Nav />
+      <header css={HeaderStyle}>
+        <div css={containerStyle}>
+          <Logo />
+          <Nav />
+        </div>
         <Profile />
       </header>
       <Outlet />
