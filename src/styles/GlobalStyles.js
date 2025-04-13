@@ -13,6 +13,7 @@ const GlobalStyles = css`
     font-family: "Pretendard", sans-serif;
     font-size: 62.5%;
     vertical-align: baseline;
+    min-width: 368px;
   }
 
   a {
