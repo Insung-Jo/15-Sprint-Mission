@@ -1,3 +1,4 @@
+import defaultItemImg from "../../assets/default/default_item.png";
 import {
   ItemImgStyle,
   ItemNameStyle,
@@ -13,9 +14,18 @@ import {
 function ItemList({ item, variant }) {
   const { name, price, images, favoriteCount } = item;
 
+  const handleError = (e) => {
+    e.target.src = defaultItemImg;
+  };
+
   return (
     <>
-      <img css={ItemImgStyle(variant)} src={images} alt={name} />
+      <img
+        css={ItemImgStyle(variant)}
+        src={images}
+        alt={name}
+        onError={handleError}
+      />
       <p css={ItemNameStyle}>{name}</p>
       <p css={ItemPriceStyle}>
         {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원"}
