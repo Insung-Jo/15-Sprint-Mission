@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import mq from "../../styles/media";
 
 const ulContainerStyle = css`
   display: flex;
@@ -6,13 +7,17 @@ const ulContainerStyle = css`
 `;
 
 const navTitleStyle = css`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #4b5563;
 
   &.active {
     color: #3692ff;
   }
+
+  ${mq({
+    fontSize: ["1.6rem", "1.8rem"],
+  })}
 `;
 
 export { ulContainerStyle, navTitleStyle };
