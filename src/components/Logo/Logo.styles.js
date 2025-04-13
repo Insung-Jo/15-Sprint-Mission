@@ -2,12 +2,12 @@ import { css } from "@emotion/react";
 import mq from "../../styles/media";
 
 const LogoStyle = css`
-  width: 15.3rem;
-  height: 5.1rem;
+  width: 8.1rem;
+  height: 2.7rem;
 
   ${mq({
-    width: ["8.1rem", "15.3rem"],
-    height: ["2.7rem", "5.1rem"],
+    width: [undefined, "15.3rem"],
+    height: [undefined, "5.1rem"],
   })}
 `;
 
