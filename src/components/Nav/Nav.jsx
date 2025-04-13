@@ -7,7 +7,7 @@ const Nav = () => {
     <nav>
       <ul css={ulContainerStyle}>
         <li>
-          <NavLink to="border" css={navTitleStyle}>
+          <NavLink to="board" css={navTitleStyle}>
             자유게시판
           </NavLink>
         </li>

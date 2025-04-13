@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage";
 import ItemPage from "./pages/ItemPage";
 import GlobalStyles from "./styles/GlobalStyles";
+import BoardPage from "./pages/BoardPage";
 
 /** @jsxImportSource @emotion/react */
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route element={<Header />}>
           <Route index element={<MainPage />} />
           <Route path="/items" element={<ItemPage />} />
+          <Route path="/board" element={<BoardPage />} />
         </Route>
       </Routes>
     </>
