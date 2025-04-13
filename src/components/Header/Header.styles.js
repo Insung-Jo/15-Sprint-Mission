@@ -16,7 +16,11 @@ const HeaderStyle = css`
 const containerStyle = css`
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 3.2rem;
+
+  ${mq({
+    gap: ["0.8rem", "2rem", "3.2rem"],
+  })}
 `;
 
 export { HeaderStyle, containerStyle };

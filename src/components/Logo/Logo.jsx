@@ -8,7 +8,7 @@ const Logo = () => {
   return (
     <Link to="/">
       <picture>
-        <source srcSet={LogoMoblieImg} media="(max-width: 368px)" />
+        <source srcSet={LogoMoblieImg} media="(max-width: 410px)" />
         <img css={LogoStyle} src={LogoImg}></img>
       </picture>
     </Link>
