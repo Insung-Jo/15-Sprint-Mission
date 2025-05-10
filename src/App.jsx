@@ -6,7 +6,6 @@ import ItemPage from "./pages/ItemPage";
 import GlobalStyles from "./styles/GlobalStyles";
 import BoardPage from "./pages/BoardPage";
 
-/** @jsxImportSource @emotion/react */
 function App() {
   return (
     <>

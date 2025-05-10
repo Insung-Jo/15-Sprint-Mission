@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { ulContainerStyle, navTitleStyle } from "./Nav.styles";
 
-/** @jsxImportSource @emotion/react */
 const Nav = () => {
   return (
     <nav>

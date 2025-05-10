@@ -10,7 +10,6 @@ import {
   ItemIlStyle,
 } from "./Item.styles";
 
-/** @jsxImportSource @emotion/react */
 function ItemList({ item, variant }) {
   const { name, price, images, favoriteCount } = item;
 

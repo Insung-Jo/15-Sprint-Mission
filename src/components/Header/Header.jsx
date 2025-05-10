@@ -4,7 +4,6 @@ import Nav from "../Nav/Nav";
 import { HeaderStyle, containerStyle } from "./Header.styles";
 import Logo from "../Logo/Logo";
 
-/** @jsxImportSource @emotion/react */
 const Header = () => {
   return (
     <>
