@@ -30,7 +30,7 @@ export const inputContainerStyle = css`
   position: relative;
 
   ${mq({
-    order: ['3', '3', '1', '1', '1'],
+    order: ['3', '1', '1', '1', '1'],
   })}
 `;
 
