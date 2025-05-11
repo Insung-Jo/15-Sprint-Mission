@@ -1,4 +1,4 @@
-import * as S from './fromInputs.styles';
+import * as S from './formInputs.styles';
 
 const FormInputs = ({ name, onNameChange, description, onDescriptionChange, price, onPriceChange }) => (
   <>
