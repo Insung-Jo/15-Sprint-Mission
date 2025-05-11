@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import * as S from './addPage.styles';
-import { titleStyle } from '../styles/common';
 import plusImg from '../assets/icons/ic_plus.png';
+import FormHeader from '../components/FormHeader/FormHeader';
 
 const AddPage = () => {
   const fileInputRef = useRef(null);
@@ -67,16 +67,7 @@ const AddPage = () => {
   return (
     <>
       <form css={S.formStyle}>
-        <div css={S.formHeaderStyle}>
-          <h1 css={titleStyle}>상품 등록하기</h1>
-          <button
-            css={S.submitButtonStyle}
-            type="submit"
-            disabled={!isFormValid}
-          >
-            등록
-          </button>
-        </div>
+				<FormHeader isFormValid={isFormValid} />
 
         <div css={S.formMainStyle}>
           <label>상품 이미지</label>
