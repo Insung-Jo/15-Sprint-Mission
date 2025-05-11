@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import usePageSize from "../hooks/usePageSize";
 import { getData } from "../api/api";
-import Item from "../components/item/Item";
+import Item from "../components/Item/Item";
 import Toolbar from "../components/ToolBar/ToolBar";
 import { ItemPageLayout } from "./pages.style";
 import { titleStyle } from "../styles/common";
