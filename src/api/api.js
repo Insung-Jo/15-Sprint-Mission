@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
+
 export async function getData({
   page = 1,
   pageSize = 10,
@@ -10,8 +12,8 @@ export async function getData({
     keyword ? `&keyword=${keyword}` : ""
   }`;
   const res = await axios.get(
-    `https://panda-market-api.vercel.app/products?${query}`
+    `${API}products?${query}`
   );
-  console.log(res.data);
+
   return res.data;
 }

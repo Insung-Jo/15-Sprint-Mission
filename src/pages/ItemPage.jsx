@@ -22,7 +22,6 @@ const ItemPage = () => {
   const handleChange = (e) => setOrder(e.target.value);
   const handleSearch = (e) => {
     setWord(e.target.value);
-    console.log("keyword:", word, word.charCodeAt(0));
   };
 
   const fetcBesthData = async (option) => {
