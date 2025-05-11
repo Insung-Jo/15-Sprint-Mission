@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import * as S from './addPage.styles';
-import plusImg from '../assets/icons/ic_plus.png';
 import FormHeader from '../components/FormHeader/FormHeader';
+import FormImageUpload from '../components/FormImageUpload/FormImageUpload';
 
 const AddPage = () => {
   const fileInputRef = useRef(null);
@@ -70,39 +70,14 @@ const AddPage = () => {
 				<FormHeader isFormValid={isFormValid} />
 
         <div css={S.formMainStyle}>
-          <label>상품 이미지</label>
-          <div css={S.imageContainerStyle}>
-            <div css={S.formImageBoxStyle} onClick={handleImageClick}>
-              <img src={plusImg} alt="plus" />
-              <p>이미지 등록</p>
-              <input
-                type="file"
-                accept="image/*"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                style={{ display: 'none' }}
-              />
-            </div>
-
-            {imagePreview && (
-              <div css={S.itemPreviewContainerStyle}>
-                <img
-                  src={imagePreview}
-                  alt="preview"
-                  css={S.previewImageStyle}
-                />
-                <button
-                  onClick={handleImageRemove}
-                  type="button"
-                  css={S.imageCloseButtonStyle}
-                />
-              </div>
-            )}
-          </div>
-
-          {errorMessage && (
-            <p css={S.errorMessageStyle}>{errorMessage}</p>
-          )}
+					<FormImageUpload
+          imagePreview={imagePreview}
+          onClick={handleImageClick}
+          onChange={handleFileChange}
+          onRemove={handleImageRemove}
+          errorMessage={errorMessage}
+          fileInputRef={fileInputRef}
+					/>
 
           <label>상품명</label>
           <input
