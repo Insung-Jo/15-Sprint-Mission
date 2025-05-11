@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import * as S from './addPage.styles';
 import FormHeader from '../components/FormHeader/FormHeader';
 import FormImageUpload from '../components/FormImageUpload/FormImageUpload';
+import FormInputs from '../components/FormInputs/FormInputs';
 
 const AddPage = () => {
   const fileInputRef = useRef(null);
@@ -67,41 +68,25 @@ const AddPage = () => {
   return (
     <>
       <form css={S.formStyle}>
-				<FormHeader isFormValid={isFormValid} />
+        <FormHeader isFormValid={isFormValid} />
 
         <div css={S.formMainStyle}>
-					<FormImageUpload
-          imagePreview={imagePreview}
-          onClick={handleImageClick}
-          onChange={handleFileChange}
-          onRemove={handleImageRemove}
-          errorMessage={errorMessage}
-          fileInputRef={fileInputRef}
-					/>
-
-          <label>상품명</label>
-          <input
-            css={S.inputStyle}
-            placeholder="상품명을 입력해주세요."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+          <FormImageUpload
+            imagePreview={imagePreview}
+            onClick={handleImageClick}
+            onChange={handleFileChange}
+            onRemove={handleImageRemove}
+            errorMessage={errorMessage}
+            fileInputRef={fileInputRef}
           />
 
-          <label>상품 소개</label>
-          <textarea
-            css={S.areaStyle}
-            placeholder="상품명을 입력해주세요."
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-
-          <label>판매 가격</label>
-          <input
-            type="number"
-            css={S.inputStyle}
-            placeholder="판매 가격을 입력해주세요"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
+					<FormInputs
+            name={name}
+            onNameChange={setName}
+            description={description}
+            onDescriptionChange={setDescription}
+            price={price}
+            onPriceChange={setPrice}
           />
 
           <label>태그</label>
