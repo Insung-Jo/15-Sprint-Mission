@@ -3,6 +3,7 @@ import * as S from './addPage.styles';
 import FormHeader from '../components/FormHeader/FormHeader';
 import FormImageUpload from '../components/FormImageUpload/FormImageUpload';
 import FormInputs from '../components/FormInputs/FormInputs';
+import FormTags from '../components/FormTags/FormTags';
 
 const AddPage = () => {
   const fileInputRef = useRef(null);
@@ -88,28 +89,13 @@ const AddPage = () => {
             price={price}
             onPriceChange={setPrice}
           />
-
-          <label>태그</label>
-          <input
-            css={S.inputStyle}
-            placeholder="태그를 입력해주세요."
-            value={tagInput}
-            onChange={handleTagInputChange}
-            onKeyDown={handleTagKeyDown}
+          <FormTags
+            tagInput={tagInput}
+            tags={tags}
+            onTagInputChange={handleTagInputChange}
+            onTagKeyDown={handleTagKeyDown}
+            onTagRemove={handleTagRemove}
           />
-
-          <div css={S.tagListContainerStyle}>
-            {tags.map((tag, index) => (
-              <div key={index} css={S.tagItemStyle}>
-                {`#${tag}`}
-                <button
-                  type="button"
-                  onClick={() => handleTagRemove(index)}
-                  css={S.tagButtonStyle}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </form>
     </>
