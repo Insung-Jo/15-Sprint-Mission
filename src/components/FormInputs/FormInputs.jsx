@@ -6,7 +6,7 @@ const FormInputs = ({ name, onNameChange, description, onDescriptionChange, pric
       <label>상품명</label>
       <input
         css={S.inputStyle}
-        placeholder="상품명을 입력해주세요."
+        placeholder="상품명을 입력해주세요"
         value={name}
         onChange={(e) => onNameChange(e.target.value)}
       />
@@ -14,7 +14,7 @@ const FormInputs = ({ name, onNameChange, description, onDescriptionChange, pric
       <label>상품 소개</label>
       <textarea
         css={S.areaStyle}
-        placeholder="상품명을 입력해주세요."
+        placeholder="상품 소개를 입력해주세요"
         value={description}
         onChange={(e) => onDescriptionChange(e.target.value)}
       />

@@ -6,7 +6,7 @@ const FormTags = ({ tagInput, tags, onTagInputChange, onTagKeyDown, onTagRemove 
       <label>태그</label>
       <input
         css={S.inputStyle}
-        placeholder="태그를 입력해주세요."
+        placeholder="태그를 입력해주세요"
         value={tagInput}
         onChange={onTagInputChange}
         onKeyDown={onTagKeyDown}
