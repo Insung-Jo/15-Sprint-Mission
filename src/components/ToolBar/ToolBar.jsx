@@ -1,19 +1,21 @@
 import { titleStyle } from "../../styles/common";
 import Button from "../Button/Button";
 import * as S from './TooBar.styles';
+import searchImg from '../../assets/icons/ic_search.png'
 
 function Toolbar() {
   return (
     <div css={S.toolbarStyle}>
-      <h2 css={titleStyle}>전체 상품</h2>
-      <div>
-        <input placeholder="검색할 상품을 입력해주세요" />
-        <Button link="/additem">상품 검색하기</Button>
-        <select>
+      <h2 css={[titleStyle, S.titleStyle]}>전체 상품</h2>
+      <div css={S.inputContainerStyle}>
+        <input css={S.inputStyle} placeholder="검색할 상품을 입력해주세요" />
+        <img css={S.iconStyle} src={searchImg} />
+      </div>
+      <Button style={S.buttonStyle} link="/additem">상품 검색하기</Button>
+        <select css={S.selectStyle}>
           <option value="recent">최신 순</option>
           <option value="favorite">좋아요 순</option>
         </select>
-      </div>  
     </div>
   );
 }
