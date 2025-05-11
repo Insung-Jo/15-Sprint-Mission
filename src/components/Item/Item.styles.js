@@ -10,7 +10,7 @@ const ITEM_SIZE = {
   xlImg: "34.3rem",
 };
 
-const ItemImgStyle = (variant) => css`
+export const ItemImgStyle = (variant) => css`
   width: ${variant ? ITEM_SIZE.large : ITEM_SIZE.medium};
   height: ${variant ? ITEM_SIZE.large : ITEM_SIZE.medium};
   object-fit: cover;
@@ -27,27 +27,27 @@ const ItemImgStyle = (variant) => css`
   })}
 `;
 
-const ItemNameStyle = css`
+export const ItemNameStyle = css`
   font-size: 1.4rem;
   font-weight: 500;
 `;
 
-const ItemPriceStyle = css`
+export const ItemPriceStyle = css`
   font-size: 1.6rem;
   font-weight: 700;
 `;
 
-const FavoriteContainer = css`
+export const FavoriteContainer = css`
   display: flex;
   gap: 0.8rem;
 `;
 
-const FavoriteCountStyle = css`
+export const FavoriteCountStyle = css`
   font-size: 1.2rem;
   font-weight: 500;
 `;
 
-const FavoriteImageStyle = css`
+export const FavoriteImageStyle = css`
   width: 1.6rem;
   height: 1.6rem;
   background-image: url(${heartImg});
@@ -56,7 +56,7 @@ const FavoriteImageStyle = css`
   background-repeat: no-repeat;
 `;
 
-const ItemUlStyle = (variant) => css`
+export const ItemUlStyle = (variant) => css`
   display: grid;
   grid-template-columns: ${variant
     ? `repeat(1, ${ITEM_SIZE.xlImg})`
@@ -80,7 +80,7 @@ const ItemUlStyle = (variant) => css`
   })}
 `;
 
-const ItemIlStyle = (variant) => css`
+export const ItemIlStyle = (variant) => css`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -98,13 +98,3 @@ const ItemIlStyle = (variant) => css`
       : [undefined, "31.7rem"],
   })}
 `;
-export {
-  ItemImgStyle,
-  ItemNameStyle,
-  ItemPriceStyle,
-  FavoriteContainer,
-  FavoriteCountStyle,
-  FavoriteImageStyle,
-  ItemUlStyle,
-  ItemIlStyle,
-};

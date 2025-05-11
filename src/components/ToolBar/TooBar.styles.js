@@ -69,7 +69,7 @@ export const selectStyle = css`
 export const iconStyle = css`
   position: absolute;
   top: 50%;
-  left: 8%;
+  left: 5%;
   transform: translateY(-50%);
   width: 1.5rem;
   height: 1.5rem;

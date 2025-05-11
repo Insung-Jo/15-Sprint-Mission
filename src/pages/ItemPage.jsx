@@ -7,6 +7,8 @@ import { ItemPageLayout } from "./pages.style";
 import { titleStyle } from "../styles/common";
 
 const ItemPage = () => {
+  const [order, setOrder] = useState("recent");
+  const [word, setWord] = useState("");
   const [item, setItem] = useState([]);
   const [best, setBest] = useState([]);
   const pageSize = usePageSize(10, 4, 6);
@@ -17,14 +19,20 @@ const ItemPage = () => {
     setItem(list);
   };
 
+  const handleChange = (e) => setOrder(e.target.value);
+  const handleSearch = (e) => {
+    setWord(e.target.value);
+    console.log("keyword:", word, word.charCodeAt(0));
+  };
+
   const fetcBesthData = async (option) => {
     const { list } = await getData(option);
     setBest(list);
   };
 
   useEffect(() => {
-    fetchData({ page: 1, pageSize: pageSize, orderBy: "recent", keyword: "" });
-  }, [pageSize]);
+    fetchData({ page: 1, pageSize: pageSize, orderBy: order, keyword: word });
+  }, [pageSize,order,word]);
 
   useEffect(() => {
     fetcBesthData({ pageSize: bestPageSize, orderBy: "favorite" });
@@ -37,7 +45,7 @@ const ItemPage = () => {
         <Item items={best} variant={true} />
       </section>
       <section>
-        <Toolbar />
+        <Toolbar onChange={handleChange} onSearch={handleSearch} />
       </section>
       <section>
         <Item items={item} variant={false} />
